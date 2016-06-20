@@ -188,3 +188,23 @@ textarea.form-control {
   font-size: 13pt;
 }
 
+label, em {
+  font-size: 25px;
+  color: #9CFFFF;
+  font-family: 'Quicksand', sans-serif; 
+}
+
+i {
+  font-size: 15px;
+  color: #9CFFFF;
+  font-family: 'Quicksand', sans-serif;   
+}
+
+form {
+  color: black;
+  font-family: 'Source Serif Pro', serif; 
+  font-size: 15pt;
+  text-align: center;
+}
+
+

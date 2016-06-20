@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/users/:id/view', to: 'users#view'
 
-  post '/users/:id/make_admin', to: 'users#make_admin'
-  post '/users/:id/remove_admin', to: 'users#remove_admin'
+  get '/users/:id/make_admin', to: 'users#make_admin'
+  get '/users/:id/remove_admin', to: 'users#remove_admin'
 
   get '/about', to: 'welcome#about'
 

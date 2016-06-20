@@ -6,11 +6,12 @@
       </td>
       <td>
         <% if !user.admin %>
-          <form method="post" action="/users/<%=user.id%>/make_admin">
+          <form method="get" action="/users/<%=user.id%>/make_admin">
             <input class="btn-default btn" type="submit" value="Make Admin" id="submit">
           </form>
+
         <% else %>
-          <form method="post" action="/users/<%=user.id%>/remove_admin">
+          <form method="get" action="/users/<%=user.id%>/remove_admin">
             <input class="btn-default btn" class="btn-default btn"type="submit" value="Remove Admin" id="submit">
           </form>
         <% end %>
