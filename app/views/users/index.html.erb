@@ -1,3 +1,22 @@
-<% @users.each do |user| %>
-  <a class="btn btn-default" href="/users/<%=user.id%>/view" role="button"><%= user.email %></a>
-<% end %>
+<table class="table borderless">
+  <% @users.each do |user| %>
+    <tr>
+      <td>
+        <a class="btn btn-default" id= "submit" href="#" role="button"><%= user.email %></a>
+      </td>
+      <td>
+        <% if !user.admin %>
+          <form method="post" action="/users/<%=user.id%>/make_admin">
+            <input class="btn-default btn" type="submit" value="Make Admin" id="submit">
+          </form>
+        <% else %>
+          <form method="post" action="/users/<%=user.id%>/remove_admin">
+            <input class="btn-default btn" class="btn-default btn"type="submit" value="Remove Admin" id="submit">
+          </form>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+

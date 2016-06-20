@@ -1,43 +1,70 @@
 <% if !@favorites.empty? %>
   <h3>My Favorites</h3>
+  <br><br>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
 
-
-<div id="carousel-example" class="carousel slide" data-ride="carousel">
     <!-- Wrapper for slides -->
-    <div class="row">
-        <div class="col-xs-offset-3 col-xs-6">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="carousel-content">
-                        <p><%=@favorites.first.book.text%></p>
-                    </div>
-                </div>
-                <% @favorites.pop.each do |fav| %>
-                  <div class="item">
-                    <div class="carousel-content">
-                      <div>
-                        <p><%= fav.book.text %></p>     
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
-            </div>
-        </div>
-    </div>
-    <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
- <a class="right carousel-control" href="#carousel-example" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active book">
+        <p><%= @first_fav.book.text %></p>
+          <div class="buttons">
+            <div class="btn-group">
+              <div class="btn">
+                <form method="get" action="/books/<%=@first_fav.book.id%>">
+                  <input class="btn-default btn" type="submit" value="Reveal Book" id="submit">
+                  <input type="hidden" name="book_id" value="<%=@first_fav.book.id%>">
+                </form>
+              </div>
 
-</div>
+              <% if user_signed_in? %>
+                <div class="btn">
+                  <%= button_to "Remove Book", {:controller => :favorites,
+      :action => 'destroy', :id => @first_fav.id, :method => :delete}, :id => 'submit' %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+      </div>
+      <% @rest_of_favs.each do |fav| %>
+        <div class="item book">
+          <p><%= fav.book.text %></p>
+          <div class="buttons">
+            <div class="btn-group">
+              <div class="btn">
+                <form method="get" action="/books/<%=fav.book.id%>">
+                  <input class="btn-default btn" type="submit" value="Reveal Book" id="submit">
+                  <input type="hidden" name="book_id" value="<%=fav.book.id%>">
+                </form>
+              </div>
+
+              <% if user_signed_in? %>
+                <div class="btn">
+                  <%= button_to "Remove Book", {:controller => :favorites,
+      :action => 'destroy', :id => fav.id, :method => :delete}, :id => 'submit' %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
 <% else %>
   <h3>You have no favorites!</h3>
   <div id="button4">
     <form method="get" action="/books">
-      <input type="submit" value="Book me up!" id="submit">
+      <input class="btn-default btn" type="submit" value="Book me up!" id="submit">
     </form>
   </div>
 <% end %>

@@ -2,15 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 
-.carousel-content {
-    color:black;
-    display:flex;
-    align-items:center;
-}
-
 body {
   background-image: url("http://www.oshayspub.com/wp-content/uploads/2014/07/darkwood-plank-1024x718.jpg");
-  background-size: cover;
+  background-size: 100%;
 }
 
 p {
@@ -22,10 +16,10 @@ p {
   margin-left: auto;
   margin-right: auto;
   height: auto;
-  width: 52%;
+  width: 42%;
   font-family: 'Source Serif Pro', serif;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 #brand {
@@ -47,6 +41,7 @@ h2
   font-family: 'Quicksand', sans-serif;
   font-size: 40pt;
   text-align: center;
+  color: #9CFFFF;
   
 }
 h3
@@ -54,12 +49,14 @@ h3
   font-family: 'Quicksand', sans-serif;
   font-size: 24pt;
   text-align: center;
+  color: #9CFFFF;
 }
 h4
 {
   font-family: 'Quicksand', sans-serif;
   font-size: 10pt;
   text-align: center;
+  color: #9CFFFF;
 }
 a
 {
@@ -69,7 +66,7 @@ a
 }
 a:link, a:visited
 {
-  color: #F5F5F5;
+  color: #9CFFFF;
 }
 a:hover
 {
@@ -79,16 +76,22 @@ a:hover
 body
 {
   background-image: url("http://www.oshayspub.com/wp-content/uploads/2014/07/darkwood-plank-1024x718.jpg");
-  color: #9CFFFF;
+  color: #FFFFFF;
+  font-family: 'Source Serif Pro', serif;
 }
 
 div#home-page {
   text-align: center;
 }
 
-.form {
-  text-align: center;
+.carousel-control {
+  position: fixed;
 }
+
+.form-horizontal {
+  width: 40%;
+}
+
 
 #submit
 {
@@ -137,6 +140,23 @@ div#home-page {
    box-shadow: 0px 0px 1px #777;
 }
 
+div.form {
+  display: block;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
+
+form.form-horizontal
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
 img.about {
   display: block;
   height: 550px;
@@ -154,26 +174,17 @@ img.cover
   margin-left:auto;
 }
 
-.enlargeinput
-{width: 400px;
-  height: 30px;
-border-radius: 20px
-
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    margin-top: 30%;
+    margin-bottom: 30%
 }
 
-.enlargeparagraph
-  {padding: 20px 20px 20px 20px;
-   line-height: 1em;
-  border-radius: 20px
-  }
-
-#contributebutton
-{
-  font-family: 'Quicksand', sans-serif;
-  font-size: 10pt;
-  display: inline-block;
-  border-color: #F5F5F5;
-  border-radius: 10px;
-  padding: 0px;
-  color: #000000;
+input[type="text"] {
+  font-size: 15pt;
 }
+
+textarea.form-control {
+  font-size: 13pt;
+}
+

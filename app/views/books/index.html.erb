@@ -1,13 +1,13 @@
 <br>
 <div class="buttons">
-  <div>
+  <div class="book">
     <p><%= @book.text %></p>
   </div>
 
   <div class="btn-group">
     <div class="btn">
       <form method="get" action="/books/<%=@book.id%>">
-        <input type="submit" value="Reveal Book" id="submit">
+        <input class="btn-default btn" type="submit" value="Reveal Book" id="submit">
         <input type="hidden" name="book_id" value="<%=@book.id%>">
       </form>
     </div>
@@ -18,14 +18,14 @@
           <%= tag(:input, type: "hidden", name: :user_id, value: current_user.id) %>
           <%= tag(:input, type: "hidden", name: :book_id, value: @book.id) %>
           <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-          <input type="submit" id="submit" value="Add to Favorites">
+          <input class="btn-default btn" type="submit" id="submit" value="Add to Favorites">
         </form>
       </div>
     <% end %>
 
     <div class="btn">
       <form method="get" action="/books">
-        <input type="submit" value="Next Book" id="submit">
+        <input class="btn-default btn" type="submit" value="Next Book" id="submit">
       </form>
     </div>
   </div>
