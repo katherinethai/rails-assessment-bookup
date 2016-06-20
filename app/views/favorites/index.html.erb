@@ -1,0 +1,43 @@
+<% if !@favorites.empty? %>
+  <h3>My Favorites</h3>
+
+
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="carousel-content">
+                        <p><%=@favorites.first.book.text%></p>
+                    </div>
+                </div>
+                <% @favorites.pop.each do |fav| %>
+                  <div class="item">
+                    <div class="carousel-content">
+                      <div>
+                        <p><%= fav.book.text %></p>     
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+ <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+
+<% else %>
+  <h3>You have no favorites!</h3>
+  <div id="button4">
+    <form method="get" action="/books">
+      <input type="submit" value="Book me up!" id="submit">
+    </form>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<%= form_for(@book) do |f| %>
+  <%= f.label "Title" %>
+  <%= f.text_field :title %><br>
+
+  <%= f.label "Author" %>
+  <%= f.text_field :author %><br>
+
+  <%= f.label "Image Link" %>
+  <%= f.text_field :img_link %><br>
+
+  <%= f.label "Amazon Link" %>
+  <%= f.text_field :amazon_link %><br>
+
+  <%= f.label "Text" %>
+  <%= f.text_area :text %><br>
+
+  <%= f.submit "Submit" %>
+<% end %>

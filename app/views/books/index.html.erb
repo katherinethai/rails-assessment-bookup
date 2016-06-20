@@ -1,0 +1,32 @@
+<br>
+<div class="buttons">
+  <div>
+    <p><%= @book.text %></p>
+  </div>
+
+  <div class="btn-group">
+    <div class="btn">
+      <form method="get" action="/books/<%=@book.id%>">
+        <input type="submit" value="Reveal Book" id="submit">
+        <input type="hidden" name="book_id" value="<%=@book.id%>">
+      </form>
+    </div>
+
+    <% if user_signed_in? %>
+      <div class="btn">
+        <form action="/favorites/new" method="post">
+          <%= tag(:input, type: "hidden", name: :user_id, value: current_user.id) %>
+          <%= tag(:input, type: "hidden", name: :book_id, value: @book.id) %>
+          <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+          <input type="submit" id="submit" value="Add to Favorites">
+        </form>
+      </div>
+    <% end %>
+
+    <div class="btn">
+      <form method="get" action="/books">
+        <input type="submit" value="Next Book" id="submit">
+      </form>
+    </div>
+  </div>
+</div>
