@@ -1,12 +1,13 @@
 class FavoritesController < ApplicationController
   def index
-    @favorites = []
-    Favorite.where(user_id: current_user.id).each do |fav|
-      @favorites << fav
-    end
-    @first_fav = @favorites.first
-    @favorites.shift
-    @rest_of_favs = @favorites
+    # @favorites = []
+    # Favorite.where(user_id: current_user.id).each do |fav|
+    #   @favorites << fav
+    # end
+    # @first_fav = @favorites.first
+    # @favorites.shift
+    # @rest_of_favs = @favorites
+    @favorites = Favorite.all
   end
 
   def new
@@ -14,7 +15,7 @@ class FavoritesController < ApplicationController
       user_id: params[:user_id],
       book_id: params[:book_id]
       )
-    redirect_to favorites_path
+    redirect_to books_path
   end
 
   def destroy
