@@ -266,6 +266,6 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :google_oauth2, "445343134187-9buq11bbopngfumse41bjq87mia90rbc.apps.googleusercontent.com", "3-wkf-ti1pF1ttwhwZ853aEC", :client_options => {:ssl => {:ca_path => '/usr/lib/ssl/certs/ca-certificates.crt'}}
+  config.secret_key = '3-wkf-ti1pF1ttwhwZ853aEC' if Rails.env == 'production'
 
 end
