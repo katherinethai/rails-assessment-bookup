@@ -27,7 +27,7 @@ gem 'devise'
 
 gem 'cancancan'
 
-gem "omniauth-google-oauth2"
+gem 'omniauth-facebook'
 
 gem 'figaro'
 # Use ActiveModel has_secure_password
@@ -55,4 +55,3 @@ end
 
 gem 'rails_12factor', group: :production
 
-ruby "2.2.3"
