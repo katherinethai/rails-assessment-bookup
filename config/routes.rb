@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index', as: '/home'
 
   get '/books/:id/admin', to: 'books#admin'
+  get '/books/all', to: 'books#all'
   
   post 'favorites/new', to: 'favorites#new'
   get '/favorites', to: 'favorites#index'

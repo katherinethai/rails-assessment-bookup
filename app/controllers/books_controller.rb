@@ -31,11 +31,15 @@ class BooksController < ApplicationController
   def update
     set_book
     @book.update(book_params)
-    redirect_to book_path(@book)
+    redirect_to "/books/#{@book.id}/admin"
   end
 
   def admin
     set_book
+  end
+
+  def all
+    @books = Book.all
   end
 
   private

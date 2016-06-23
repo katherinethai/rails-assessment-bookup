@@ -3,12 +3,14 @@
 
 <h3><%= @book.author %></h3><br>
 
-<h4><%= @book.genre %></h4>
+<h3><%= @book.genre %></h3>
 
 <a href="<%=@book.amazon_link%>">
   <img class="cover" src="<%=@book.img_link%>" alt="<%= @book.title %> cover">
 </a>
-<br><br>
+
 <div class="book">
-  <p><strong>Text: </strong><br><%= @book.text %></p>
+  <h3>Text</h3><br>
+  <p><%= @book.text %></p>
 </div>
+<br><br>

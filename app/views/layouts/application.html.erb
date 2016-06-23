@@ -34,9 +34,21 @@
               <%= link_to "Sign Up", new_user_registration_path %>
             <% else %>
               <%= link_to "Favorites", favorites_path %>
-              <li><%= link_to "Settings", edit_user_registration_path %></li>
               <% if current_user.admin %>
-                <li><%= link_to "All Users", '/users' %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/users">All Users</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/books/all">All Books</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Report</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                  </ul>
+                </li>
+              <% else %> 
+                <li><%= link_to "Settings", edit_user_registration_path %></li>
               <% end %>
             <% end %>
           </li>

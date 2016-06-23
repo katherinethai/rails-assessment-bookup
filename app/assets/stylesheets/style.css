@@ -175,6 +175,13 @@ img.cover
   margin-left:auto;
 }
 
+
+img#small-cover {
+  height: 50px;
+  width: 32px;
+}
+
+
 .carousel-control.left, .carousel-control.right {
     background-image: none;
     margin-top: 30%;
@@ -217,5 +224,4 @@ form {
   font-size: 15pt;
   text-align: center;
 }
-
 

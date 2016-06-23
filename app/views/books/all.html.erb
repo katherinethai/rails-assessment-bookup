@@ -1,0 +1,20 @@
+<table class="table borderless">
+  <tr>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Genre</td>
+    <td>Cover</td>
+    <td>Amazon</td>
+    <td>Edit</td>
+  </tr>
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.genre %></td>
+      <td><img id="small-cover" src="<%= book.img_link %>" alt="book cover"></td>
+      <td><a href="<%= book.amazon_link %>">Link</a></td>
+      <td><a href="/books/<%= book.id %>/edit">Edit</a></td>
+    </tr>
+  <% end %>
+</table>
