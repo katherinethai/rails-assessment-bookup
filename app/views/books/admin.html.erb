@@ -13,4 +13,10 @@
   <h3>Text</h3><br>
   <p><%= @book.text %></p>
 </div>
+<br>
+<div id="button4">
+  <form  method="get" action="/books/<%= @book.id %>/edit">
+    <input class="btn btn-default" type="submit" value="Edit" id="submit">
+  </form>
+</div>
 <br><br>

@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get '/about', to: 'welcome#about'
 
   resources :books
+  resources :reports, only: [:index]
 end

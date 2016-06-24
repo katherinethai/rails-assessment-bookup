@@ -1,0 +1,12 @@
+<table class="table">
+  <tr>
+    <td><h3>Most Favorited Book</h3></td>
+    <td><h3>Number of Users</h3></td>
+    <td><h3>Number of Books</h3></td>
+  </tr>
+  <tr>
+    <td><%= link_to @most_favorited_book.title, "books/#{@book_id}/admin" %></td>
+    <td><%= link_to @num_users, '/users' %></td>
+    <td><%= link_to @num_books, '/books' %></td>
+  </tr>
+</table>
