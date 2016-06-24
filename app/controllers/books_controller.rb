@@ -1,7 +1,9 @@
 class BooksController < ApplicationController
   def index
     @book = Book.get_random
-    @favorite_books = current_user.books
+    if current_user
+      @favorite_books = current_user.books
+    end
   end
 
   def show
@@ -18,7 +20,11 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.create(book_params)
-    redirect_to "/books/#{@book.id}/admin"
+    if @book.save
+      redirect_to "/books/#{@book.id}/admin"
+    else
+      render :new
+    end
   end
 
   def edit
