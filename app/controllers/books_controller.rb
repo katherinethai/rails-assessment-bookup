@@ -1,6 +1,8 @@
+require 'pry'
 class BooksController < ApplicationController
   def index
     @book = Book.get_random
+    @favorite_books = current_user.books
   end
 
   def show

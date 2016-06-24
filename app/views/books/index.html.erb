@@ -12,7 +12,7 @@
       </form>
     </div>
 
-    <% if user_signed_in? %>
+    <% if user_signed_in? && @favorite_books && !@favorite_books.include?(@book) %>
       <div class="btn">
         <form action="/favorites/new" method="post">
           <%= tag(:input, type: "hidden", name: :user_id, value: current_user.id) %>
