@@ -1,4 +1,3 @@
-require 'pry'
 class BooksController < ApplicationController
   def index
     @book = Book.get_random

@@ -1,4 +1,3 @@
-require 'pry'
 class ReportsController < ApplicationController
   def index
     @most_favorited_book = Book.most_favorited
