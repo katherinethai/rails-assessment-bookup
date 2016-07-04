@@ -18,7 +18,7 @@
           <%= tag(:input, type: "hidden", name: :user_id, value: current_user.id) %>
           <%= tag(:input, type: "hidden", name: :book_id, value: @book.id) %>
           <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-          <input class="btn-default btn" type="submit" id="submit" value="Add to Favorites">
+        <input type="submit" value="Add to Favorites" class="btn-default btn" id="submit">
         </form>
       </div>
     <% end %>

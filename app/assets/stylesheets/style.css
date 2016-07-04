@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
 @import url(https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200);
 
 body {
   background-image: url("http://www.oshayspub.com/wp-content/uploads/2014/07/darkwood-plank-1024x718.jpg");
@@ -16,7 +17,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   height: auto;
-  width: 57%;
+  width: 46%;
   font-family: 'Source Serif Pro', serif;
   font-size: 20px;
   text-align: left;
@@ -25,7 +26,7 @@ p {
 #brand {
   font-family: 'Oleo Script Swash Caps', cursive;
   font-size: 40pt;
-  color: #000000;
+  color: #FFFFFF;
   text-align: center;
   text-decoration: none;
 }
@@ -33,44 +34,44 @@ p {
 #contact h2 {
   font-size: 30pt;
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 h2
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 40pt;
   text-align: center;
-  color: #9CFFFF;
+  color: #FFFFFF;
   
 }
 h3
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 24pt;
   text-align: center;
-  color: #9CFFFF;
+  color: #FFFFFF;
 }
 h4
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 13pt;
   text-align: center;
-  color: #9CFFFF;
+  color: #FFFFFF;
 }
 a
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18pt;
   text-align: center;
 }
 a:link, a:visited
 {
-  color: #9CFFFF;
+  color: #FFFFFF;
 }
 a:hover
 {
-  color: #9CFFFF;
+  color: #92B6D5;
   text-decoration: none;
 }
 body
@@ -95,13 +96,16 @@ div#home-page {
 
 #submit
 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
   font-size: 20pt;
   display: inline-block;
-  border-color: #fcfeec;
-  border-radius: 25px;
+  border-color: #92B6D5;
+  border-radius: 10px;
   padding: 20px;
-  color: #000000;
+  color: #FFFFFF;
+  background-color:#92B6D5;
+
 }
 
 #button3
@@ -137,8 +141,7 @@ div#home-page {
 }
 #submit:hover {
    border: none;
-   background: #9CFFFF;
-   box-shadow: 0px 0px 1px #777;
+   background: #4C6A92;;
 }
 
 div.form {
@@ -198,14 +201,14 @@ textarea.form-control {
 
 label, em {
   font-size: 25px;
-  color: #9CFFFF;
-  font-family: 'Quicksand', sans-serif; 
+  color: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
 }
 
 i {
   font-size: 15px;
-  color: #9CFFFF;
-  font-family: 'Quicksand', sans-serif;   
+  color: #FFFFFF;
+  font-family: 'Raleway', sans-serif; 
 }
 
 div.first p {
@@ -225,4 +228,40 @@ form {
   text-align: center;
 }
 
+.btn {
+  box-shadow: none;
+}
+
+.container-fluid {
+  padding: 15px;
+}
+
+.navbar {
+  background-color: #92B6D5;
+  border-color: #92B6D5;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #4C6A92; 
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+  color: #FFFFFF; 
+}
+
+.glyphicon {
+  font-size: 30px;
+}
+
+#link
+{
+  color: #92B6D5;
+  font-size: 20px;
+}
+
+#link:hover
+{
+  color: #4C6A92;
+  text-decoration: none;
+}
 
