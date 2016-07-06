@@ -255,13 +255,17 @@ form {
 
 #link
 {
-  color: #92B6D5;
+  color: #000000;
   font-size: 20px;
+  font-family: 'Source Serif Pro', serif;
+  text-decoration: underline;
 }
 
 #link:hover
 {
   color: #4C6A92;
   text-decoration: none;
+  font-family: 'Source Serif Pro', serif;
+  text-decoration: underline;
 }
 
