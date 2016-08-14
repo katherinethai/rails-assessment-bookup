@@ -5,7 +5,9 @@ class Book < ActiveRecord::Base
   validates :title, :author, :text, presence: true
 
   def self.get_random
-    self.all.sample
+    book_array = Book.find_by_sql "SELECT * FROM books ORDER BY RANDOM() LIMIT 1"
+    book = book_array[0]
+    book
   end
 
   def self.most_favorited
