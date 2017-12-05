@@ -3,10 +3,10 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:700);
 @import url(https://fonts.googleapis.com/css?family=Raleway:200);
 
-body {
-  background-image: url("http://www.oshayspub.com/wp-content/uploads/2014/07/darkwood-plank-1024x718.jpg");
+/*body {
+  background-image: url('../images/wood_background.jpeg');
   background-size: 100%;
-}
+}*/
 
 p {
   border-color: #F5F5F5;
@@ -76,7 +76,7 @@ a:hover
 }
 body
 {
-  background-image: url("http://www.oshayspub.com/wp-content/uploads/2014/07/darkwood-plank-1024x718.jpg");
+  background-image: url('https://static.pexels.com/photos/326311/pexels-photo-326311.jpeg');
   color: #FFFFFF;
   font-family: 'Source Serif Pro', serif;
 }
